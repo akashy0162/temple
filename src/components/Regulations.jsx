@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Regulations = () => {
-  // Mock data for the government documents
-  const documents = [
-    { id: 1, title: 'Shri Bhagwati Dham Seva Trust Act, 1950', size: '2.4 MB', date: 'Jan 12, 2026' },
-    { id: 2, title: 'Board of Trustees Official Registry', size: '1.1 MB', date: 'Mar 05, 2026' },
-    { id: 3, title: 'Section 80G Tax Exemption Certificate', size: '850 KB', date: 'Apr 20, 2026' },
-    { id: 4, title: 'Annual Audit Report (2025-2026)', size: '3.2 MB', date: 'May 10, 2026' },
-    { id: 5, title: 'Guidelines for Temple Renovation Projects', size: '1.8 MB', date: 'Jun 01, 2026' }
+  // Static mock documents
+  const staticDocuments = [
+    { id: 'S1', title: 'Shri Bhagwati Dham Seva Trust Act, 1950', size: '2.4 MB', date: 'Jan 12, 2026' },
+    { id: 'S2', title: 'Board of Trustees Official Registry', size: '1.1 MB', date: 'Mar 05, 2026' },
+    { id: 'S3', title: 'Section 80G Tax Exemption Certificate', size: '850 KB', date: 'Apr 20, 2026' },
+    { id: 'S4', title: 'Annual Audit Report (2025-2026)', size: '3.2 MB', date: 'May 10, 2026' },
+    { id: 'S5', title: 'Guidelines for Temple Renovation Projects', size: '1.8 MB', date: 'Jun 01, 2026' }
   ];
+
+  const [documents, setDocuments] = useState(staticDocuments);
+
+  useEffect(() => {
+    const uploadedDocs = JSON.parse(localStorage.getItem('templeDocs')) || [];
+    setDocuments([...uploadedDocs, ...staticDocuments]);
+  }, []);
+
+  const handleDownload = (doc) => {
+    if (doc.src) {
+      window.open(doc.src, '_blank');
+    } else {
+      alert("This is a mock document and cannot be downloaded.");
+    }
+  };
 
   return (
     <section className="py-16 bg-white min-h-screen">
@@ -41,8 +56,11 @@ const Regulations = () => {
                   </div>
                 </div>
 
-                <button className="flex-shrink-0 bg-orange-50 hover:bg-orange-100 text-orange-700 font-bold py-2 px-6 rounded-md transition shadow-sm border border-orange-200">
-                  Download
+                <button 
+                  onClick={() => handleDownload(doc)}
+                  className="flex-shrink-0 bg-orange-50 hover:bg-orange-100 text-orange-700 font-bold py-2 px-6 rounded-md transition shadow-sm border border-orange-200"
+                >
+                  {doc.src ? "View PDF" : "Download"}
                 </button>
 
               </div>
