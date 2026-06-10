@@ -1,0 +1,54 @@
+TEMPLE TRUST WEBSITE
+|
+|- Introduction Page
+|    |- Little bit of everything
+|    |- Bhagwati Maa's idol photo
+|    |- Photo Gallery
+|    |- Charitable activities by trust
+|    |- About the website
+|
+|- Navigation Bar
+|    |- About Us
+|    |	  |- About the temple
+|    |	  |	|- About the deity
+|    |	  |	|- History of the temple
+|    |	  |	|- Establishment of the temple
+|    |	  |- Temple Architecture
+|    |	  |- Garbha Griha
+|    |	  |- Important Dates
+|    |	  |- Pooja Details
+|    |	  |- Board of Trustees
+|    |
+|    |- Temples Act and Regulation
+|    |	  |- Documents issued by the government
+|    |
+|    |- Live Darshan
+|    |	  |- Live Video or Recording of Previous live video on youtube
+|    |
+|    |- Video and Photo Gallery 
+|    |
+|    |- (Optional) Forms and tenders
+|    |	  |- Vendors
+|    |	  |- Renovation of the temple
+|    | 
+|    |- Google Map Integration
+|    | 	  
+|    |- Temple e-Seva
+|    | 	  |- Online Pooja Booking
+|    |	  |- Personalized Darshan Booking
+|    |
+|    |- Donation
+|    |	  |- First QR than if possible razorpay	 
+_________________________________________________|
+
+What do we need?
+
+- About the temple
+- History of the temple
+- Who made the temple
+- Temple architecture (Area and Perimeter) 
+- Photos and Videos
+- Priest Info
+- Government's Documents related to the temple
+- About the trust
+- Trust committee members name and details and designation
