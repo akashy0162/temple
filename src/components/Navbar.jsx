@@ -15,9 +15,10 @@ const Navbar = ({ isAuthenticated, onLogout }) => {
   return (
     <nav className="bg-orange-600 text-white p-4 shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold hover:text-yellow-300 transition">
+        <Link to="/" className="text-2xl font-bold hover:text-yellow-300 transition mr-auto">
           Shri Maa Bhagwati Dham Seva Trust
         </Link>
+        
         
         <ul className="flex space-x-6 items-center">
           
@@ -48,8 +49,8 @@ const Navbar = ({ isAuthenticated, onLogout }) => {
           </li>
 
           <li className="py-2">
-            <Link to="/forms-tenders" className="hover:text-yellow-300 font-medium">
-              Forms & Tenders
+            <Link to="/charity-work" className="hover:text-yellow-300 font-medium">
+              Charity Work
             </Link>
           </li>
 

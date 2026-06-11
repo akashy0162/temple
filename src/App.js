@@ -13,7 +13,7 @@ import LocationMap from './components/LocationMap';
 import AIChatbot from './components/AIChatbot';
 import AdminDashboard from './components/AdminDashboard';
 import AdminLogin from './components/AdminLogin';
-import FormsTenders from './components/FormsTenders';
+import CharityWork from './components/CharityWork';
 import AboutUs from './components/AboutUs';
 import Regulations from './components/Regulations';
 import UserAuth from './components/UserAuth';
@@ -160,7 +160,7 @@ function App() {
         <Route path="/" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><HomePage /></PublicLayout>} />
         <Route path="/donate" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><DonationSection /></PublicLayout>} />
         <Route path="/about" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><AboutUs /></PublicLayout>} />
-        <Route path="/forms-tenders" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><FormsTenders /></PublicLayout>} />
+        <Route path="/charity-work" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><CharityWork /></PublicLayout>} />
         <Route path="/regulations" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><Regulations /></PublicLayout>} />
         <Route path="/live-darshan" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><LiveDarshan /></PublicLayout>} />
         <Route path="/gallery" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><Gallery /></PublicLayout>} />
