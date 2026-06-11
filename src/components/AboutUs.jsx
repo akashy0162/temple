@@ -9,7 +9,7 @@ const AboutUs = () => {
         
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-orange-800 mb-4">About Shri Bhagwati Dham Seva Trust</h2>
+          <h2 className="text-4xl font-bold text-orange-800 mb-4">About Shri Bhagwati Dham Temple and Trust</h2>
           <div className="w-24 h-1 bg-orange-500 mx-auto rounded"></div>
         </div>
 

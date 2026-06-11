@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';   
 import LiveDarshan from './components/LiveDarshan';
 import DonationSection from './components/DonationSection';
 import OnlinePooja from './components/OnlinePooja';
