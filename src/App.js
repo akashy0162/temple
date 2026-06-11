@@ -48,6 +48,43 @@ const HomePage = () => {
         </motion.div>
       </header>
 
+      <section className="bg-white py-12 shadow-md">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-br from-orange-50 to-orange-100 border-l-4 border-orange-600 rounded-2xl p-8 md:p-10"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-orange-900 mb-4">Maa Bhagwati</h2>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Maa Bhagwati, the supreme goddess of power and protection, is worshipped at our sacred temple. 
+                  She embodies strength, courage, and divine grace, blessing her devotees with health, prosperity, 
+                  and spiritual enlightenment. Her presence symbolizes the triumph of good over evil and the compassion 
+                  of the divine mother.
+                </p>
+                <p className="text-gray-600 text-sm italic">
+                  Join thousands of devotees who seek her blessings through daily prayers, offerings, and sacred rituals performed with utmost devotion.
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <div className="rounded-2xl overflow-hidden shadow-lg bg-white p-2">
+                  <img
+                    src="/media/maa-bhagwati.jpeg"
+                    alt="Maa Bhagwati idol"
+                    className="w-full h-auto object-cover rounded-lg aspect-square"
+                    onError={(e) => e.target.src = 'https://via.placeholder.com/400?text=Maa+Bhagwati'}
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <main className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 max-w-6xl text-center">
           <motion.div
