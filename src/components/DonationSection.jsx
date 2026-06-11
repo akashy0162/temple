@@ -2,8 +2,12 @@ import React from 'react';
 import { QRCodeSVG } from 'qrcode.react'; // 👇 Updated Import
 
 const DonationSection = () => {
+  // Replace this URL with your actual Razorpay Payment Page URL from the dashboard
+  const RAZORPAY_PAYMENT_PAGE_URL = "https://pages.razorpay.com/pl_placeholder";
+
   const handleRazorpayClick = () => {
-    alert("Initiating Razorpay gateway...");
+    // Opens the Razorpay payment page in a new tab
+    window.open(RAZORPAY_PAYMENT_PAGE_URL, "_blank");
   };
 
   const upiString = "upi://pay?pa=QR919838251445-0174@unionbankofindia&pn=MAA%20BHAGWATI%20DHAM%20SEVA%20TRUST&cu=INR";
