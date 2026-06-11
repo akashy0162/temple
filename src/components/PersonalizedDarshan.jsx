@@ -17,12 +17,24 @@ const PersonalizedDarshan = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Replace with your Razorpay Payment Page URL for Darshan Booking
+  const RAZORPAY_DARSHAN_PAYMENT_URL = "https://pages.razorpay.com/pl_darshan_placeholder";
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate API call to backend
+    // In a real app with a backend, you'd create an order first. 
+    // Here we redirect to a Razorpay Payment Page to complete the booking.
+    window.open(RAZORPAY_DARSHAN_PAYMENT_URL, "_blank");
+    
+    // Simulate success after returning from payment
     setTimeout(() => {
       setIsSubmitted(true);
-    }, 1000);
+    }, 2000);
+  };
+
+  const calculateFee = () => {
+    if (formData.attendees === 'group') return 'Custom Fee';
+    return `₹${parseInt(formData.attendees) * 501}`;
   };
 
   return (
@@ -247,11 +259,15 @@ const PersonalizedDarshan = () => {
                   </div>
 
                   <div className="mt-8">
+                    <div className="flex justify-between items-center mb-4 px-2 p-3 bg-orange-100 rounded-lg border border-orange-200">
+                      <span className="text-gray-800 font-semibold text-lg">Total Booking Fee:</span>
+                      <span className="text-2xl font-extrabold text-orange-700">{calculateFee()}</span>
+                    </div>
                     <button
                       type="submit"
                       className="w-full flex justify-center items-center py-4 px-4 border border-transparent rounded-xl shadow-md text-lg font-bold text-white bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transform transition hover:-translate-y-1"
                     >
-                      Confirm Booking Request
+                      Proceed to Payment
                     </button>
                     <p className="text-center text-xs text-gray-500 mt-4">
                       By booking, you agree to follow all temple regulations. Your information is securely stored.
