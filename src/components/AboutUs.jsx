@@ -23,7 +23,7 @@ const AboutUs = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
-          <h2 className="text-4xl font-extrabold text-orange-900 mb-4 tracking-tight">About Shri Bhagwati Dham Seva Trust</h2>
+          <h2 className="text-4xl font-extrabold text-orange-900 mb-4 tracking-tight">About Shri Bhagawati Dham Seva Trust</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-red-500 mx-auto rounded-full"></div>
         </motion.div>
 
@@ -86,7 +86,7 @@ const AboutUs = () => {
                       History & Establishment
                     </h3>
                     <p className="text-gray-600 text-lg leading-relaxed">
-                      The Shri Bhagwati Maa Temple stands as a beacon of faith, established over three centuries ago. According to local lore, the temple was founded after a divine vision guided the early settlers to this exact location along the spiritual corridors of the city.
+                      The Shri Bhagawati Maa Temple stands as a beacon of faith, established over three centuries ago. According to local lore, the temple was founded after a divine vision guided the early settlers to this exact location along the spiritual corridors of the city.
                     </p>
                     <p className="text-gray-600 text-lg leading-relaxed">
                       The Temple Trust was officially registered in 1950 to ensure the preservation of the temple's heritage, manage the growing number of devotees, and spearhead charitable activities in the surrounding communities.
@@ -101,7 +101,7 @@ const AboutUs = () => {
                       About the Deity
                     </h3>
                     <p className="text-gray-600 text-lg leading-relaxed">
-                      The presiding deity, Bhagwati Maa, is worshipped as the supreme embodiment of universal energy, compassion, and protection. The magnificent idol is adorned daily with fresh flowers and sacred ornaments, drawing thousands of devotees seeking peace and prosperity.
+                      The presiding deity, Bhagawati Maa, is worshipped as the supreme embodiment of universal energy, compassion, and protection. The magnificent idol is adorned daily with fresh flowers and sacred ornaments, drawing thousands of devotees seeking peace and prosperity.
                     </p>
                   </div>
                 )}

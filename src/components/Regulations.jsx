@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const Regulations = () => {
   // Static mock documents
   const staticDocuments = [
-    { id: 'S1', title: 'Shri Bhagwati Dham Seva Trust Act, 1950', size: '2.4 MB', date: 'Jan 12, 2026' },
+    { id: 'S1', title: 'Shri Bhagawati Dham Seva Trust Act, 1950', size: '2.4 MB', date: 'Jan 12, 2026' },
     { id: 'S2', title: 'Board of Trustees Official Registry', size: '1.1 MB', date: 'Mar 05, 2026' },
     { id: 'S3', title: 'Section 80G Tax Exemption Certificate', size: '850 KB', date: 'Apr 20, 2026' },
     { id: 'S4', title: 'Annual Audit Report (2025-2026)', size: '3.2 MB', date: 'May 10, 2026' },

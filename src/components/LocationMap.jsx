@@ -13,11 +13,11 @@ const LocationMap = () => {
           
           {/* Map Embed Column */}
           <div className="w-full md:w-2/3 bg-gray-200 rounded-xl overflow-hidden shadow-lg h-96 relative border border-gray-300">
-            {/* 👇 FIXED: Standard Google Maps Embed URL pointing to Varanasi 👇 */}
+            {/* 👇 ACTUAL Google Maps Embed URL pointing to Maa Bhagawati Dham with Label 👇 */}
             <iframe 
               className="absolute top-0 left-0 w-full h-full"
               title="Temple Location Map"
-              src="https://maps.google.com/maps?q=Varanasi,+Uttar+Pradesh,+India&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+              src="https://maps.google.com/maps?q=25.5054604,83.4597433+(Bhagawati+Mata+Temple)&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               frameBorder="0" 
               scrolling="no" 
               marginHeight="0" 
@@ -34,8 +34,9 @@ const LocationMap = () => {
                 <span className="text-xl mr-3" role="img" aria-label="Location pin">📍</span>
                 <div>
                   <strong className="text-gray-900">Address:</strong><br />
-                  Shri Bhagwati Maa Temple Complex,<br />
-                  Varanasi, Uttar Pradesh, India
+                  Maa Bhagawati Dham Seva Trust,<br />
+                  Anapur Sarayan, Tulapatti, Karanda,<br />
+                  Ghazipur, Uttar Pradesh, India - 233224
                 </div>
               </li>
               
@@ -43,7 +44,7 @@ const LocationMap = () => {
                 <span className="text-xl mr-3" role="img" aria-label="Train">🚆</span>
                 <div>
                   <strong className="text-gray-900">Nearest Station:</strong><br />
-                  Varanasi Cantonment Railway Station (approx. 4 km)
+                  Ghazipur City Railway Station
                 </div>
               </li>
               
@@ -56,9 +57,9 @@ const LocationMap = () => {
               </li>
             </ul>
 
-            {/* 👇 FIXED: Standard Google Maps Directions URL 👇 */}
+            {/* 👇 UPDATED: Google Maps Directions URL 👇 */}
             <button 
-              onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=Varanasi,+Uttar+Pradesh,+India', '_blank')}
+              onClick={() => window.open('https://maps.app.goo.gl/SVWKRHYwKCvBqdV76', '_blank')}
               className="mt-8 w-full bg-orange-600 text-white py-3 rounded-md font-bold hover:bg-orange-700 shadow-md transition transform hover:-translate-y-0.5"
             >
               Get Directions

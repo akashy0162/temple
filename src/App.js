@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Camera, CalendarCheck, MapPin, Image as ImageIcon, HeartHandshake, Info, ArrowRight } from 'lucide-react';
+import { Camera, CalendarCheck, MapPin, Image as ImageIcon, HeartHandshake, Info, ArrowRight, Phone, Mail } from 'lucide-react';
 
 import Navbar from './components/Navbar';   
 import LiveDarshan from './components/LiveDarshan';
@@ -17,6 +17,8 @@ import CharityWork from './components/CharityWork';
 import AboutUs from './components/AboutUs';
 import Regulations from './components/Regulations';
 import UserAuth from './components/UserAuth';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
 
 // HomePage Component
 const HomePage = () => {
@@ -39,7 +41,7 @@ const HomePage = () => {
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center text-white p-4 max-w-4xl"
         >
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight tracking-tight">Welcome to <span className="text-orange-400">Shri Maa Bhagwati Dham</span></h1>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight tracking-tight">Welcome to <span className="text-orange-400">Shri Maa Bhagawati Dham</span></h1>
           <p className="text-xl md:text-2xl mx-auto drop-shadow-md text-gray-200">Experience peace, devotion, and community from the comfort of your home or plan your next visit.</p>
           <div className="mt-8 flex justify-center gap-4">
             <Link to="/live-darshan" className="bg-orange-600 hover:bg-orange-500 text-white px-8 py-3 rounded-full font-bold shadow-lg transition transform hover:-translate-y-1">Watch Live Darshan</Link>
@@ -59,9 +61,9 @@ const HomePage = () => {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-orange-900 mb-4">Maa Bhagwati</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-orange-900 mb-4">Maa Bhagawati</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Maa Bhagwati, the supreme goddess of power and protection, is worshipped at our sacred temple. 
+                  Maa Bhagawati, the supreme goddess of power and protection, is worshipped at our sacred temple. 
                   She embodies strength, courage, and divine grace, blessing her devotees with health, prosperity, 
                   and spiritual enlightenment. Her presence symbolizes the triumph of good over evil and the compassion 
                   of the divine mother.
@@ -74,9 +76,9 @@ const HomePage = () => {
                 <div className="rounded-2xl overflow-hidden shadow-lg bg-white p-2">
                   <img
                     src="/media/maa-bhagwati.jpeg"
-                    alt="Maa Bhagwati idol"
+                    alt="Maa Bhagawati idol"
                     className="w-full h-auto object-cover rounded-lg aspect-square"
-                    onError={(e) => e.target.src = 'https://via.placeholder.com/400?text=Maa+Bhagwati'}
+                    onError={(e) => e.target.src = 'https://via.placeholder.com/400?text=Maa+Bhagawati'}
                   />
                 </div>
               </div>
@@ -137,8 +139,69 @@ const PublicLayout = ({ children, isUserAuthenticated, onUserLogout }) => (
     <Navbar isAuthenticated={isUserAuthenticated} onLogout={onUserLogout} />
     <div className="flex-grow">{children}</div>
     <AIChatbot />
-    <footer className="bg-gray-800 text-white text-center p-6 mt-auto">
-      <p>© 2026 Temple Trust Website. All rights reserved.</p>
+    <footer className="bg-gray-900 text-gray-300 py-12 mt-auto border-t border-gray-800">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          {/* About & Address */}
+          <div>
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+              <MapPin className="w-5 h-5 mr-2 text-orange-500" />
+              Location
+            </h3>
+            <p className="mb-2 font-semibold text-gray-200">Maa Bhagawati Dham Seva Trust</p>
+            <p className="text-sm leading-relaxed">
+              Anapur Sarayan, Tulapatti, Karanda<br />
+              Ghazipur, Uttar Pradesh, India - 233224
+            </p>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+              <Phone className="w-5 h-5 mr-2 text-orange-500" />
+              Contact Us
+            </h3>
+            <ul className="space-y-3">
+              <li className="flex items-center text-sm hover:text-orange-400 transition-colors cursor-pointer">
+                <a href="tel:+919838251445" className="flex items-center">
+                  <Phone className="w-4 h-4 mr-3" />
+                  +91 9838251445
+                </a>
+              </li>
+              <li className="flex items-center text-sm hover:text-orange-400 transition-colors cursor-pointer">
+                <a href="mailto:Mbdstrust@gmail.com" className="flex items-center">
+                  <Mail className="w-4 h-4 mr-3" />
+                  Mbdstrust@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+             <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+               <HeartHandshake className="w-5 h-5 mr-2 text-orange-500" />
+               Connect With Us
+             </h3>
+             <p className="text-sm mb-4">Stay updated with our daily events, special poojas, and charitable activities.</p>
+             <div className="flex gap-4">
+                <Link to="/donate" className="bg-orange-600 hover:bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg transition transform hover:-translate-y-1">
+                  Donate Now
+                </Link>
+             </div>
+          </div>
+          
+        </div>
+        
+        <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm flex flex-col md:flex-row justify-between items-center">
+          <p>© 2026 Temple Trust Website. All rights reserved.</p>
+          <div className="flex space-x-4 mt-4 md:mt-0">
+             <Link to="/privacy-policy" className="hover:text-orange-400 cursor-pointer transition-colors">Privacy Policy</Link>
+             <Link to="/terms-of-service" className="hover:text-orange-400 cursor-pointer transition-colors">Terms of Service</Link>
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
 );
@@ -202,6 +265,8 @@ function App() {
         <Route path="/live-darshan" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><LiveDarshan /></PublicLayout>} />
         <Route path="/gallery" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><Gallery /></PublicLayout>} />
         <Route path="/location" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><LocationMap /></PublicLayout>} />
+        <Route path="/privacy-policy" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><PrivacyPolicy /></PublicLayout>} />
+        <Route path="/terms-of-service" element={<PublicLayout isUserAuthenticated={isUserAuthenticated} onUserLogout={handleUserLogout}><TermsOfService /></PublicLayout>} />
         
         {/* 👇 Protected E-Seva Routes 👇 */}
         <Route 

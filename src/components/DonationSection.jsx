@@ -10,7 +10,7 @@ const DonationSection = () => {
     window.open(RAZORPAY_PAYMENT_PAGE_URL, "_blank");
   };
 
-  const upiString = "upi://pay?pa=QR919838251445-0174@unionbankofindia&pn=MAA%20BHAGWATI%20DHAM%20SEVA%20TRUST&cu=INR";
+  const upiString = "upi://pay?pa=QR919838251445-0174@unionbankofindia&pn=MAA%20BHAGAWATI%20DHAM%20SEVA%20TRUST&cu=INR";
 
   return (
     <section className="py-12 container mx-auto text-center animate-fade-in">
@@ -30,7 +30,7 @@ const DonationSection = () => {
             />
           </div>
           
-          <p className="text-sm text-gray-800 font-bold mb-1">MAA BHAGWATI DHAM SEVA TRUST</p>
+          <p className="text-sm text-gray-800 font-bold mb-1">MAA BHAGAWATI DHAM SEVA TRUST</p>
           <p className="text-xs text-gray-500 mb-3 break-all px-4">QR919838251445-0174@unionbankofindia</p>
           <p className="text-sm text-orange-600 font-semibold bg-orange-50 py-1 rounded">UPI Accepted: GPay, PhonePe, Paytm</p>
         </div>
